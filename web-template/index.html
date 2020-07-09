@@ -10,6 +10,7 @@
     <div class="grid-container">
       <header class="header">
         <div class="brand">
+          <button class="brand__button">&#9776;</button>
           <a href="index.html" class="brand__item">Amazona</a>
         </div>
         <div class="link">
@@ -17,6 +18,14 @@
           <a href="signin.html" class="link__item">Sign In</a>
         </div>
       </header>
+      <aside class="sidebar">
+        <h3>Shopping Categories</h3>
+        <button class="sidebar__button">X</button>
+        <ul>
+          <li>Pants</li>
+          <li>Shirts</li>
+        </ul>
+      </aside>
       <main class="main">
         <div class="content">
           <ul class="products">
@@ -162,5 +171,16 @@
         All right reserved
       </footer>
     </div>
+
+    <script>
+      document.querySelector(".brand__button").addEventListener("click", () => {
+        document.querySelector(".sidebar").classList.add("open");
+      });
+      document
+        .querySelector(".sidebar__button")
+        .addEventListener("click", () => {
+          document.querySelector(".sidebar").classList.remove("open");
+        });
+    </script>
   </body>
 </html>
