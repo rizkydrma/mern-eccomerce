@@ -36,6 +36,10 @@ body {
   text-decoration: none;
 }
 
+.link__item {
+  margin: 0 10px;
+}
+
 .link__item:hover {
   color: orangered;
 }
