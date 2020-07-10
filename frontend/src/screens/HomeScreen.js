@@ -1,15 +1,18 @@
-import { React, Link, useState, useEffect, axios } from "libraries";
+import { React, Link, useEffect, useSelector, useDispatch } from "libraries";
+import { listProduct } from "modules/redux/actions/productActions";
 
 export default function HomeScreen() {
-  const [products, setProducts] = useState([]);
+  const productList = useSelector((state) => state.productList);
+  const { loading, products, error } = productList;
+  const dispatch = useDispatch();
   useEffect(() => {
-    const fetchData = async () => {
-      const { data } = await axios.get("/api/products");
-      setProducts(data);
-    };
-    fetchData();
+    dispatch(listProduct());
   }, []);
-  return (
+  return loading ? (
+    <div>loading....</div>
+  ) : error ? (
+    <div>{error}</div>
+  ) : (
     <ul className="products">
       {products.map((product) => {
         return (
