@@ -1,4 +1,4 @@
-import { React } from "libraries";
+import { React, Link } from "libraries";
 
 export default function index() {
   const openMenu = () => {
@@ -11,9 +11,9 @@ export default function index() {
         <button className="brand__button" onClick={openMenu}>
           &#9776;
         </button>
-        <a href="index.html" className="brand__item">
+        <Link to="/" className="brand__item">
           Amazona
-        </a>
+        </Link>
       </div>
       <div className="link">
         <a href="cart.html" className="link__item">

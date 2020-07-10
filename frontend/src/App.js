@@ -10,7 +10,6 @@ function App() {
       <div className="grid-container">
         <Header />
         <Sidebar />
-
         <main className="main">
           <div className="content">
             <Switch>
