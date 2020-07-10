@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "baseUrl": "./src",
+    "sourceMap": true,
+    "paths": {
+      "screens": ["./screens"],
+      "components": ["./components"],
+      "libraries": ["./libraries"],
+      "modules": ["./modules"],
+      "assets": ["./assets"],
+      "routes": ["./routes"]
+    }
+  }
+}
