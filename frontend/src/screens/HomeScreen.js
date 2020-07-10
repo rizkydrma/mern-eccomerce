@@ -1,10 +1,17 @@
-import { React, Link } from "libraries";
-import data from "assets/dummy/data";
+import { React, Link, useState, useEffect, axios } from "libraries";
 
 export default function HomeScreen() {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const { data } = await axios.get("/api/products");
+      setProducts(data);
+    };
+    fetchData();
+  }, []);
   return (
     <ul className="products">
-      {data.products.map((product) => {
+      {products.map((product) => {
         return (
           <li className="products__listItem" key={product._id}>
             <div className="product">
