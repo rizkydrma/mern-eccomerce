@@ -11,6 +11,7 @@ export default {
       numReviews: 10,
       description:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam dolorum dolores adipisci? Debitis dolor, aut quo, officiis, nisi nobis porro dicta tenetur magnam blanditiis itaque sint cupiditate pariatur distinctio consequuntur.",
+      countInStock: 0,
     },
     {
       _id: 2,
@@ -23,6 +24,7 @@ export default {
       numReviews: 10,
       description:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam dolorum dolores adipisci? Debitis dolor, aut quo, officiis, nisi nobis porro dicta tenetur magnam blanditiis itaque sint cupiditate pariatur distinctio consequuntur.",
+      countInStock: 4,
     },
     {
       _id: 3,
@@ -35,6 +37,7 @@ export default {
       numReviews: 10,
       description:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam dolorum dolores adipisci? Debitis dolor, aut quo, officiis, nisi nobis porro dicta tenetur magnam blanditiis itaque sint cupiditate pariatur distinctio consequuntur.",
+      countInStock: 5,
     },
     {
       _id: 4,
@@ -47,6 +50,7 @@ export default {
       numReviews: 10,
       description:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam dolorum dolores adipisci? Debitis dolor, aut quo, officiis, nisi nobis porro dicta tenetur magnam blanditiis itaque sint cupiditate pariatur distinctio consequuntur.",
+      countInStock: 5,
     },
     {
       _id: 5,
@@ -59,6 +63,7 @@ export default {
       numReviews: 10,
       description:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam dolorum dolores adipisci? Debitis dolor, aut quo, officiis, nisi nobis porro dicta tenetur magnam blanditiis itaque sint cupiditate pariatur distinctio consequuntur.",
+      countInStock: 5,
     },
     {
       _id: 6,
@@ -71,6 +76,7 @@ export default {
       numReviews: 10,
       description:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam dolorum dolores adipisci? Debitis dolor, aut quo, officiis, nisi nobis porro dicta tenetur magnam blanditiis itaque sint cupiditate pariatur distinctio consequuntur.",
+      countInStock: 5,
     },
     {
       _id: 7,
@@ -83,6 +89,7 @@ export default {
       numReviews: 10,
       description:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam dolorum dolores adipisci? Debitis dolor, aut quo, officiis, nisi nobis porro dicta tenetur magnam blanditiis itaque sint cupiditate pariatur distinctio consequuntur.",
+      countInStock: 5,
     },
     {
       _id: 8,
@@ -95,6 +102,7 @@ export default {
       numReviews: 10,
       description:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam dolorum dolores adipisci? Debitis dolor, aut quo, officiis, nisi nobis porro dicta tenetur magnam blanditiis itaque sint cupiditate pariatur distinctio consequuntur.",
+      countInStock: 5,
     },
   ],
 };

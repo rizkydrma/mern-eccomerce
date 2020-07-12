@@ -5,11 +5,15 @@ import {
   compose,
   thunk,
 } from "libraries";
-import productListReducer from "./reducers/productReducers";
+import {
+  productListReducers,
+  productDetailReducers,
+} from "./reducers/productReducers";
 
 const initialState = {};
 const reducer = combineReducers({
-  productList: productListReducer,
+  productList: productListReducers,
+  productDetails: productDetailReducers,
 });
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
