@@ -1,6 +1,12 @@
-import { HomeScreen, ProductScreen } from "screens";
+import { HomeScreen, ProductScreen, CartScreen } from "screens";
 
 const appRoutes = [
+  {
+    name: "CartScreen",
+    component: CartScreen,
+    exact: false,
+    path: "/cart/:id?",
+  },
   {
     name: "ProductScreen",
     component: ProductScreen,

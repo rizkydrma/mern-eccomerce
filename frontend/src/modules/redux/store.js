@@ -4,16 +4,21 @@ import {
   applyMiddleware,
   compose,
   thunk,
+  Cookie,
 } from "libraries";
 import {
   productListReducers,
   productDetailReducers,
 } from "./reducers/productReducers";
+import { cartReducers } from "./reducers/cartReducers";
 
-const initialState = {};
+const cartItems = Cookie.getJSON("cartItems") || [];
+
+const initialState = { cart: { cartItems } };
 const reducer = combineReducers({
   productList: productListReducers,
   productDetails: productDetailReducers,
+  cart: cartReducers,
 });
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

@@ -11,7 +11,7 @@ export default {
       numReviews: 10,
       description:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam dolorum dolores adipisci? Debitis dolor, aut quo, officiis, nisi nobis porro dicta tenetur magnam blanditiis itaque sint cupiditate pariatur distinctio consequuntur.",
-      countInStock: 0,
+      countInStock: 10,
     },
     {
       _id: 2,

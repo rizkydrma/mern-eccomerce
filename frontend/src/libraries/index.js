@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import PropTypes from "prop-types";
+import Cookie from "js-cookie";
 import axios from "axios";
 import thunk from "redux-thunk";
 
-export { React, ReactDOM, axios, thunk };
+export { React, ReactDOM, axios, thunk, Cookie };
 
 export * from "react";
 export * from "react-router-dom";
