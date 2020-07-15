@@ -9,16 +9,21 @@ import {
 import {
   productListReducers,
   productDetailReducers,
-} from "./reducers/productReducers";
-import { cartReducers } from "./reducers/cartReducers";
+  cartReducers,
+  userSigninReducer,
+  userRegisterReducer,
+} from "modules/redux/reducers";
 
 const cartItems = Cookie.getJSON("cartItems") || [];
+const userInfo = Cookie.getJSON("userInfo") || null;
 
-const initialState = { cart: { cartItems } };
+const initialState = { cart: { cartItems }, userSignin: { userInfo } };
 const reducer = combineReducers({
   productList: productListReducers,
   productDetails: productDetailReducers,
   cart: cartReducers,
+  userSignin: userSigninReducer,
+  userRegister: userRegisterReducer,
 });
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

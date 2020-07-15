@@ -273,3 +273,34 @@ button {
   border-radius: 1rem;
   padding: 1rem;
 }
+
+/* FORM */
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  width: 32rem;
+  padding: 2rem;
+  border: 0.1rem solid grey;
+  border-radius: 0.5rem;
+  list-style-type: none;
+}
+
+.form__container li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+input {
+  padding: 1rem;
+  border: 0.1rem solid grey;
+  border-radius: 0.5rem;
+}

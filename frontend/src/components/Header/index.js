@@ -1,6 +1,6 @@
 import { React, Link } from "libraries";
 
-export default function index() {
+export default function index({ userInfo }) {
   const openMenu = () => {
     document.querySelector(".sidebar").classList.add("open");
   };
@@ -16,12 +16,18 @@ export default function index() {
         </Link>
       </div>
       <div className="link">
-        <a href="cart.html" className="link__item">
+        <Link to="/cart" className="link__item">
           Cart
-        </a>
-        <a href="signin.html" className="link__item">
-          Sign In
-        </a>
+        </Link>
+        {userInfo ? (
+          <Link to="/profile" className="link__item">
+            {userInfo.name}{" "}
+          </Link>
+        ) : (
+          <Link to="/signin" className="link__item">
+            Signin
+          </Link>
+        )}
       </div>
     </header>
   );
