@@ -3,5 +3,13 @@ import ProductScreen from "./ProductScreen";
 import CartScreen from "./CartScreen";
 import SigninScreen from "./SigninScreen";
 import RegisterScreen from "./RegisterScreen";
+import ProductsScreen from "./ProductsScreen";
 
-export { HomeScreen, ProductScreen, CartScreen, SigninScreen, RegisterScreen };
+export {
+  HomeScreen,
+  ProductScreen,
+  CartScreen,
+  SigninScreen,
+  RegisterScreen,
+  ProductsScreen,
+};

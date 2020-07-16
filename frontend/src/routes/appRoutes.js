@@ -4,9 +4,16 @@ import {
   CartScreen,
   SigninScreen,
   RegisterScreen,
+  ProductsScreen,
 } from "screens";
 
 const appRoutes = [
+  {
+    name: "ProductsScreen",
+    component: ProductsScreen,
+    exact: false,
+    path: "/products",
+  },
   {
     name: "SigninScreen",
     component: SigninScreen,

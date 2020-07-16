@@ -3,8 +3,9 @@ import data from "./data";
 import dotenv from "dotenv";
 import config from "./config";
 import mongoose from "mongoose";
-import userRoute from "./routes/userRoutes";
 import bodyParser from "body-parser";
+import userRoute from "./routes/userRoutes";
+import productRoute from "./routes/productRoutes";
 
 dotenv.config();
 
@@ -21,21 +22,22 @@ const app = express();
 app.use(bodyParser.json());
 
 app.use("/api/users", userRoute);
+app.use("/api/products", productRoute);
 
 // GET DETAIL PRODUCT
-app.get("/api/products/:id", (req, res) => {
-  const productId = parseInt(req.params.id);
-  const product = data.products.find((x) => x._id === productId);
-  if (product) {
-    res.send(product);
-  } else {
-    res.status(404).send({ msg: "Product Not Found" });
-  }
-});
-// GET ALL PRODUCT
-app.get("/api/products", (req, res) => {
-  res.send(data.products);
-});
+// app.get("/api/products/:id", (req, res) => {
+//   const productId = parseInt(req.params.id);
+//   const product = data.products.find((x) => x._id === productId);
+//   if (product) {
+//     res.send(product);
+//   } else {
+//     res.status(404).send({ msg: "Product Not Found" });
+//   }
+// });
+// // GET ALL PRODUCT
+// app.get("/api/products", (req, res) => {
+//   res.send(data.products);
+// });
 
 app.listen(5000, () =>
   console.log(`Server has started on port http://localhost:5000`)
