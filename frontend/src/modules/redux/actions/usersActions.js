@@ -10,8 +10,8 @@ import {
 } from "modules/redux/constant/userConstant";
 
 const signin = (email, password) => async (dispatch) => {
-  dispatch({ type: USER_SIGNIN_REQUEST, payload: { email, password } });
   try {
+    dispatch({ type: USER_SIGNIN_REQUEST, payload: { email, password } });
     const { data } = await axios.post("/api/users/signin", { email, password });
     dispatch({ type: USER_SIGNIN_SUCCESS, payload: data });
     Cookie.set("userInfo", JSON.stringify(data));
@@ -20,8 +20,11 @@ const signin = (email, password) => async (dispatch) => {
   }
 };
 const register = (name, email, password) => async (dispatch) => {
-  dispatch({ type: USER_REGISTER_REQUEST, payload: { name, email, password } });
   try {
+    dispatch({
+      type: USER_REGISTER_REQUEST,
+      payload: { name, email, password },
+    });
     const { data } = await axios.post("/api/users/register", {
       name,
       email,

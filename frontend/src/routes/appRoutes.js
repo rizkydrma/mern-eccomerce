@@ -5,9 +5,30 @@ import {
   SigninScreen,
   RegisterScreen,
   ProductsScreen,
+  ShippingScreen,
+  PaymentScreen,
+  PlaceOrderScreen,
 } from "screens";
 
 const appRoutes = [
+  {
+    name: "PlaceOrderScreen",
+    component: PlaceOrderScreen,
+    exact: false,
+    path: "/placeorder",
+  },
+  {
+    name: "PaymentScreen",
+    component: PaymentScreen,
+    exact: false,
+    path: "/payment",
+  },
+  {
+    name: "ShippingScreen",
+    component: ShippingScreen,
+    exact: false,
+    path: "/shipping",
+  },
   {
     name: "ProductsScreen",
     component: ProductsScreen,

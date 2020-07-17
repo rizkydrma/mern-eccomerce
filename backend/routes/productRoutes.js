@@ -8,6 +8,15 @@ router.get("/", async (req, res) => {
   const products = await Product.find({});
   res.send(products);
 });
+router.get("/:id", async (req, res) => {
+  const products = await Product.findOne({ _id: req.params.id });
+  console.log(products);
+  if (products) {
+    res.send(products);
+  } else {
+    res.status(404).send({ msg: "Product Not Found" });
+  }
+});
 
 router.post("/", isAuth, isAdmin, async (req, res) => {
   const product = new Product({

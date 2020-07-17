@@ -1,9 +1,14 @@
 import {
   CART_ADD_ITEM,
   CART_REMOVE_ITEM,
+  CART_SAVE_SHIPPING,
+  CART_SAVE_PAYMENT,
 } from "modules/redux/constant/cartConstant";
 
-function cartReducers(state = { cartItems: [] }, action) {
+function cartReducers(
+  state = { cartItems: [], shipping: {}, payment: {} },
+  action
+) {
   const { type, payload } = action;
   switch (type) {
     case CART_ADD_ITEM:
@@ -26,6 +31,10 @@ function cartReducers(state = { cartItems: [] }, action) {
           (cartItem) => cartItem.product !== payload
         ),
       };
+    case CART_SAVE_SHIPPING:
+      return { ...state, shipping: payload };
+    case CART_SAVE_PAYMENT:
+      return { ...state, payment: payload };
     default:
       return state;
   }
